@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Prueba HTML</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f8;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --primary-color: #3b82f6;
+      --primary-hover: #2563eb;
+      --border-color: #e5e7eb;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1f2937;
+      --card-bg: #111827;
+      --text-color: #f9fafb;
+      --border-color: #374151;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .interactive-section {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid var(--border-color);
+      background-color: var(--card-bg);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Página de Prueba HTML</h1>
+    <button id="themeToggle" class="btn">Modo Oscuro</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Bienvenido a la página de prueba</h2>
+      <p>Esta es una página web simple creada en HTML5 con estilos en CSS3 y funcionalidades interactivas con JavaScript.</p>
+    </section>
+
+    <section class="card">
+      <h2>Sección Interactiva</h2>
+      <p>Haz clic en el botón para incrementar el contador:</p>
+      <div class="interactive-section">
+        <button id="counterBtn" class="btn">Clics: 0</button>
+        <button id="resetBtn" class="btn" style="background-color: #ef4444;">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Lista de Verificación</h2>
+      <ul>
+        <li>✅ HTML5 Semántico</li>
+        <li>✅ Diseño Adaptable (Responsive)</li>
+        <li>✅ Cambiador de Tema (Claro/Oscuro)</li>
+        <li>✅ Contador Interactivo</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Página de prueba generada exitosamente.</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const counterBtn = document.getElementById('counterBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    let count = 0;
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.body.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.body.removeAttribute('data-theme');
+        themeToggle.textContent = 'Modo Oscuro';
+      } else {
+        document.body.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = 'Modo Claro';
+      }
+    });
+
+    counterBtn.addEventListener('click', () => {
+      count++;
+      counterBtn.textContent = `Clics: ${count}`;
+    });
+
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      counterBtn.textContent = `Clics: ${count}`;
+    });
+  </script>
+</body>
+</html>
