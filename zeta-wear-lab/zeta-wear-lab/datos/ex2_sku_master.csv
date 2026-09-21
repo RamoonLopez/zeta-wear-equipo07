@@ -1,0 +1,21 @@
+sku,name,category,price,cost,lead_time_days,annual_demand
+ZW-TEE-001,Camiseta básica blanca,Básicos,9.95,3.10,30,60000
+ZW-TEE-002,Camiseta gráfica limited,Básicos,17.95,5.40,30,12000
+ZW-TEE-003,Camiseta rayas marinera,Básicos,12.95,4.20,30,3000
+ZW-DEN-001,Vaquero slim stretch,Denim,29.95,11.50,45,20000
+ZW-DEN-002,Vaquero wide leg,Denim,35.95,30.50,45,8000
+ZW-DEN-003,Bermuda denim,Denim,22.95,8.90,45,1000
+ZW-SAS-001,Blazer entallada,Sastrería,59.95,22.40,60,700
+ZW-SAS-002,Pantalón de vestir,Sastrería,39.95,15.10,60,9000
+ZW-SAS-003,Chaleco de traje,Sastrería,29.95,11.80,60,500
+ZW-VES-001,Vestido midi flores,Vestidos,39.95,13.60,50,1500
+ZW-VES-002,Vestido negro básico,Vestidos,29.95,10.20,50,6000
+ZW-VES-003,Vestido satinado fiesta,Vestidos,49.95,17.80,50,800
+ZW-ACC-001,Cinturón piel,Accesorios,15.95,4.90,35,3000
+ZW-ACC-002,Bolso bandolera,Accesorios,25.95,8.70,35,1200
+ZW-ACC-003,Pañuelo estampado,Accesorios,12.95,3.40,35,2000
+ZW-PUN-001,Jersey cuello redondo,Punto,25.95,9.30,55,1500
+ZW-PUN-002,Cárdigan oversize,Punto,32.95,12.10,55,800
+ZW-CAZ-001,Cazadora bomber,Cazadoras,45.95,17.90,55,900
+ZW-CAZ-002,Parka acolchada,Cazadoras,69.95,27.50,60,600
+ZW-ACC-004,Gorra logo,Accesorios,13.95,3.80,35,4000
